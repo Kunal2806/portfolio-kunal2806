@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 
 @theme {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  
   --color-background: hsl(220 20% 6%);
   --color-foreground: hsl(0 0% 98%);
   --color-primary: hsl(185 80% 55%);
@@ -10,4 +13,5 @@
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+  cursor: default;
 }
