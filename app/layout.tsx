@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import './globals.css'
 
 import {Syne, DM_Sans} from 'next/font/google'
@@ -16,6 +17,7 @@ export default function RootLayout({children}:Props){
   return(
     <html lang='en' className={`${syne.variable} ${dmSans.variable}`}>
       <body>
+        <Navbar/>
         {children}
       </body>
     </html>
