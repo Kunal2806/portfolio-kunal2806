@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
   
-export default function Hero() {
+export default function HeroPage() {
   
   const [animeCat, setAnimeCat] = useState(true);
 
@@ -29,7 +29,7 @@ export default function Hero() {
   ];
 
   return(
-    <section className='relative min-h-screen flex flex-col md:gap-10 gap-5 items-center justify-center overflow-hidden mt-15'>
+    <section id='home' className='relative min-h-screen flex flex-col md:gap-10 gap-5 items-center justify-center overflow-hidden mt-15'>
     {
       FloatingShape.map((shape, index)=>(
         <motion.div 

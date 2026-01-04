@@ -2,9 +2,10 @@ import Image from "next/image"
 
 const MyImg = "/my-img02.png"
 
-const About = () => {
+const AboutPage = () => {
+  const Skills = ["ReactJs", "Typescript", "Tailwind Css","ExpressJs", "MongoDB", "Drizzle ORM", "NextJs"];
   return (
-    <section className="flex justify-center items-center mt-16 px-4">
+    <section id="about" className="flex justify-center items-center mt-16 px-4">
       <div className="max-w-4xl">
         <Image
           className="rounded-full float-left mr-6 mb-4"
@@ -20,10 +21,19 @@ const About = () => {
           My journey in tech has been driven by curiosity and a desire to solve real-world problems. I believe in writing code that not only works but is also maintainable and scalable.
           When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
         </p>
-
+        <div className="flex gap-10 justify-end items-center my-4">
+          {
+            Skills.map((data, index)=>(
+              <div key={index} className="border border-primary rounded-xl p-2">
+                {data}  
+              </div>
+            ))
+          }
+        </div>
+        
       </div>
     </section>
   )
 }
 
-export default About
+export default AboutPage
