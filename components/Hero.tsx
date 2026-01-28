@@ -77,6 +77,7 @@ export default function HeroPage() {
       <div className='flex justify-center items-center gap-10 mt-5'>
         <div className='relative'>
           <CatAnime showCat = {animeCat}/>
+          <a href="#projects">
           <motion.button
           type="button"
           className="
@@ -93,11 +94,11 @@ export default function HeroPage() {
           onMouseEnter={()=>setAnimeCat(false)}
           onMouseLeave={()=>setAnimeCat(true)}
         >
-          <a href="#projects">
             View My Work
-          </a>
         </motion.button>
+          </a>
         </div>
+          <a href="#contact">
         
         <motion.button
           type="button"
@@ -115,10 +116,10 @@ export default function HeroPage() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#contact">
             Get in Touch
-          </a>
         </motion.button>
+          </a>
+
       </div>
 
       <div className='flex gap-10'>
