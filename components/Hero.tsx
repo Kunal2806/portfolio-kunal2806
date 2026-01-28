@@ -93,7 +93,9 @@ export default function HeroPage() {
           onMouseEnter={()=>setAnimeCat(false)}
           onMouseLeave={()=>setAnimeCat(true)}
         >
-          View My Work
+          <a href="#projects">
+            View My Work
+          </a>
         </motion.button>
         </div>
         
@@ -113,7 +115,9 @@ export default function HeroPage() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Get in Touch
+          <a href="#contact">
+            Get in Touch
+          </a>
         </motion.button>
       </div>
 
