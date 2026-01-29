@@ -5,7 +5,7 @@ const MyImg = "/my-img02.png"
 const AboutPage = () => {
   const Skills = ["ReactJs", "Typescript", "Tailwind Css","ExpressJs", "MongoDB", "Drizzle ORM", "NextJs"];
   return (
-    <section id="about" className="flex justify-center items-center mt-16 px-4">
+    <section id="about" className="flex justify-center items-center pt-20 px-4">
       <div className="max-w-4xl">
         <Image
           className="rounded-full float-left mr-6 mb-4"

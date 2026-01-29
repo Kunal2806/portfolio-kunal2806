@@ -10,10 +10,29 @@ const ContactPage = () => {
     message: ''
   });
 
+  async function ContactPost() {
+    const response = await fetch('/api/contact',{
+      method: "POST",
+      headers: {
+        "Contant-Type" : "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
+    const data = await response.json();
+    alert("message: " + data.message);
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    })
+  }
+  
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    // console.log('Form submitted:', formData);
     // Add your form submission logic here
+    ContactPost();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

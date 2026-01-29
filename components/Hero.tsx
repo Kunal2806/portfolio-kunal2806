@@ -4,6 +4,7 @@ import CatAnime from '@/components/CatAnime'
 import { easeInOut, motion} from 'framer-motion'
 import { Github, Linkedin, LucideIcon, Mail} from 'lucide-react'
 import { useState } from 'react'
+import { ScrollToSection } from './Navbar'
 
 
   
@@ -29,7 +30,7 @@ export default function HeroPage() {
   ];
 
   return(
-    <section id='home' className='relative min-h-screen flex flex-col md:gap-10 gap-5 items-center justify-center overflow-hidden mt-15'>
+    <section id='home' className='relative min-h-screen flex flex-col md:gap-10 gap-5 items-center justify-center overflow-hidden pt-15'>
     {
       FloatingShape.map((shape, index)=>(
         <motion.div 
@@ -77,7 +78,6 @@ export default function HeroPage() {
       <div className='flex justify-center items-center gap-10 mt-5'>
         <div className='relative'>
           <CatAnime showCat = {animeCat}/>
-          <a href="#projects">
           <motion.button
           type="button"
           className="
@@ -93,12 +93,11 @@ export default function HeroPage() {
 
           onMouseEnter={()=>setAnimeCat(false)}
           onMouseLeave={()=>setAnimeCat(true)}
+          onClick={()=>ScrollToSection("projects")}
         >
             View My Work
         </motion.button>
-          </a>
         </div>
-          <a href="#contact">
         
         <motion.button
           type="button"
@@ -115,10 +114,10 @@ export default function HeroPage() {
           "
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={()=>ScrollToSection("contact")}
         >
             Get in Touch
         </motion.button>
-          </a>
 
       </div>
 

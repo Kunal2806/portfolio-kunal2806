@@ -51,7 +51,7 @@ const ProjectsPage = () => {
     : repos.filter(repo => repo.language === filter);
 
   return (
-    <section id="projects" className="min-h-screen bg-background text-foreground py-20 px-6 mt-15">
+    <section id="projects" className="min-h-screen bg-background text-foreground py-20 px-6 pt-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Projects</h2>
